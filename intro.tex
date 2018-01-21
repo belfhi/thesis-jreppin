@@ -1,0 +1,150 @@
+\chapter{Introduction}\label{Chap:Intro}
+Magnetohydrodynamic turbulence offers a rich variety of physical
+phenomena and hence is still a field of intense research.  In
+comparison to pure (incompressible) hydrodynamical turbulence, the
+presence of magnetic fields introduces additional complexity to the
+problem, changing the picture from the classical turbulence theory
+introduced by Kolmogorov \citep{Kolmogorov41}.
+
+Hence, MHD turbulence has long been an area of interest.
+For example, a large scale background field or the field on the
+largest eddy-containing scales could give rise to modifications of the
+small-scale fluctuations compared to pure hydrodynamic turbulence.
+Iroshnikov \cite{Iroshnikov1964} \& Kraichnan
+\cite{Kraichnan1965b} firstly introduced a modified theoretical
+description where only waves of opposite directions interact.
+This interaction is then governed by the \alfven timescale
+$\tau_A\sim l/v_A$ which is shorter than the eddy-distortion time
+$\tau_l$ considered otherwise.  This introduces an additional factor
+of $\tau_l/\tau_A$ in the energy-transfer time which is used in the
+derivation of the hydrodynamic turbulence theory.  The \alfven effect
+\citep{Iroshnikov1964,Kraichnan1965b} causes the inertial-range
+scaling to differ from classical HD turbulence, effectively leading to
+a more shallow spectrum of $E\sim k^{-3/2}$, rather than $E\sim k^{-5/3}$.
+
+The theory of \alfvenic wave interaction was extended by Sridhar \&
+Goldreich and Goldreich \& Sridhar 
+\citep{SridharGoldreich94, SridharGoldreich95} to include interactions
+of multiple \alfvenic wave modes.  It then follows that 3-mode wave
+interactions do not give rise to resonances which then leads to the
+conclusion of a failure of the IK theory. \hl{A first complete discussion of MHD
+turbulence with resonant interactions was discussed by Galtier et. al (2000)} \cite{Galtier2000}.
+
+
+The detailed analysis of MHD turbulence including resonant 4-wave
+interactions gives rise to a steeper spectrum of
+$E_k\propto k_{\|}^{-2}$, but also a highly anisotropic spectrum where
+one has to differentiate between the perpendicular and the parallel
+parts of the energy spectrum.  Cho \& Vishniac
+\cite{ChoVishniac2000} and more recently also Beresnyak
+\cite{Beresnyak15} conclude in their analysis that a theoretically
+derived Sridhar \& Goldreich spectrum agrees with their numerical
+simulations.  See the book by Biskamp \cite{BiskampBook} for a
+a more detailed discussion about the effects of \alfvenic waves in
+turbulent fields.
+
+Another important phenomenon is observed when the field exhibits
+\textit{magnetic helicity}. In this case it is well known that the
+decay is drastically different where one observes an increase of
+magnetic energy on large scales and hence, a dynamical growth of the
+correlation length (see e.g. Pouquet et al., Christensson et
+al., \cite{Pouquet1976,Christensson01}). This effect of an
+\textit{inverse cascade} is due to the well conserved helicity during
+the turbulent decay (see also \cref{Sec:hel_decay} in this work).
+  
+Without the presence of helicity, earlier studies by Batchelor \citep{Batchelor50},
+Saffman \citep{Saffman67},  Banerjee \& Jedamzik \citep{Banerjee04} and Sethi et al. \citep{Sethi05} showed that for blue magnetic field spectra, \hl{i.e. a spectrum which rises for large Fourier modes}, the coherence length also increases but this happens 
+by the damping of small-scale fluctuations, leaving only large-scale fluctuations.
+In this case, the decay law for the magnetic energy and the growth rate of the coherence length
+depends on the large scale spectral index of the magnetic field
+fluctuations. 
+Also, other numerical studies confirmed that
+the peak of the magnetic spectrum moves along the large scale spectrum
+while the small-scale fluctuations decay
+(e.g. \cite{Campanelli07,Saveliev12,Saveliev13}). 
+
+Recently, Brandenburg et al. \cite{Brandenburg15} suggested
+that, even without helicity, the magnetic energy can increase on scales
+larger than the initial integral scale, and the coherence length can
+moderately grow through an effect similar to the helical case. 
+But this nonhelical \textit{inverse transfer} requires high Reynolds
+numbers. Hence, previous studies of nonhelical MHD turbulence decay
+have not seen this effect clearly \citep{MuellerBiskamp99,
+  Christensson01, Banerjee04b, Kalelkar04} whereas latest numerical studies seem
+to confirm the result by Brandenburg et al.
+\cite{Zrake2014,Linkmann16}. 
+
+If the effect of the inverse transfer is proven to be universal for
+large Reynolds number regimes, it would have a large impact for
+magnetic field evolution, in particular, during the Early
+Universe. Here, slight changes of the turbulent decay law (which is
+typically a power law of the time $t$) will result in different field
+strengths and coherence lengths at later epochs. For instance,
+assuming a magneto-genesis scenario during the electroweak (EW) phase
+transition, Wagstaff et al. \cite{Wagstaff16} \hl{showed that the
+decay of the magnetic field will be too fast to explain the weak lower bounds
+of the magnetic fields in the voids of galaxies as inferred from Fermi
+observations of TeV Blazars} \cite{Neronov10, Taylor11}. Without the
+effect of the inverse transfer the magnetic energy will decay as
+$E_B \propto t^{-10/7}$ (see e.g. \cite{Banerjee04b, Sethi05}) if a
+causal magnetic field spectrum with no helicity is assumed
+\cite{Durrer03}. Otherwise, according to the decay law by the effect
+of the inverse transfer, the magnetic energy decays as $E_B \propto
+t^{-1}$, leaving strong enough present-day magnetic fields to explain
+the fields in voids of galaxies \cite{Kahniashvili13}. 
+
+Motivated by the work by Brandenburg et. al (2015) \cite{Brandenburg15},
+we performed a detailed numerical investigation to test the regimes where one can
+expect an efficient inverse transfer of energy to larger scales during
+the decay of magnetic fields.
+Unlike in the case of helical magnetic fields, where helicity is a
+conserved quantity and energy is transferred to larger scales by an
+inverse cascade, the physical reasoning of the non-helical
+\textit{inverse transfer} is not understood (see appendix of this work
+and supplement of \cite{Brandenburg15}). Our goal is to shed some light on
+this phenomenon. For this reason, we mainly use the well established
+Pencil Code \cite{PENCIL10}, which was also used in the original study
+by Brandenburg et al. \cite{Brandenburg15}, where we vary the
+Reynolds number, the Prandtl number as well as the initial spectra of
+the stochastic magnetic field. 
+
+
+This work starts off with a discussion of helical and nonhelical
+turbulence in \cref{Chap:Turbulence}.  In \cref{Chap:Methods} we
+describe the details of our numerical setup, the analysis methods and
+the run-time parameters. We then present the simulation results in
+\cref{Chap:Results} where we discuss the impact of the variation of
+the viscosity parameter and the Prandtl number as well as the
+influence of the initial spectrum on the \textit{inverse transfer}.
+Furthermore, we present a run with the \textit{Zeus-MP2} Code, where
+we don't see enough evidence for the \textit{inverse transfer} and
+discuss how that could be linked to the numerical integration
+scheme. We conclude in \cref{Chap:Conc} with the discussion
+of our main findings and their impact on causally generated fields in
+the early Universe questioning the effect of the inverse transfer due
+to large expected Prandtl numbers. 
+% \begin{itemize}
+%     \item What is the subject of the study? Describe the
+%         economic/econometric problem.
+% 
+%     \item What is the purpose of the study (working hypothesis)?
+% 
+%     \item What do we already know about the subject (literature
+%         review)? Use citations: \textit {\citet{Gallant:87} shows that...
+%         Alternative Forms of the Wald test are considered
+%         \citep{Breusch&Schmidt:88}.}
+% 
+%     \item What is the innovation of the study?
+% 
+%     \item Provide an overview of your results.
+% 
+% 
+%     \item Outline of the paper:\\
+%         \textit{ The paper is organized as follows. The next section describes the
+%         model under investigation. Section \ref{Sec:Data} describes the data set
+%         and Section \ref{Sec:Results} presents the results. Finally, Section
+%         \ref{Sec:Conc} concludes.}
+% 
+%     \item The introduction should not be longer than 4 pages.
+%
+%\end{itemize}
